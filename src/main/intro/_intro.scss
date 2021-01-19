@@ -194,6 +194,20 @@
                     }
                 }
             }
+
+            .tabBox{
+                .tab_content_item{
+                    &:nth-of-type(1){
+                        .wrap{
+                            display: block;
+
+                            .img{
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     

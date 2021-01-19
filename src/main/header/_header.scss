@@ -67,12 +67,14 @@
                     // width: 10rem;
                     cursor: pointer;
                     padding: 0.6rem;
+                    width: 100%;
                 }
                 
                 .select{
                     margin: 0.5rem;
                     position: relative;
                     overflow: hidden;
+                    width: 13rem;
 
                     &::after{
                         content: "\25BC";
