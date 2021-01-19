@@ -1,0 +1,189 @@
+#header {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+
+    .inner {
+        height: 100%;
+        background-color: var(--black-color);
+
+        >h1 {
+            line-height: 100px;
+            color: var(--white-color);
+        }
+
+        #gnb {
+           
+            li {
+
+                a {
+                    display: block;
+                    line-height: 60px;
+                    text-align: center;
+                    transition: 0.5s;
+
+                    &:hover,
+                    &.on {
+                        background-color :var(--grey-dark-color); 
+                        color:var(--white-color);
+                    }
+                }
+
+                #sub{
+                    display: none;
+                    background-color: rgba(0,0,0,0.1);
+
+                    >li{
+                        >a{
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #nav{
+            button{
+                padding: 0.5rem;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+            button:hover{
+                color: var(--white-color);
+                background-color: var(--blue-color);
+            }
+            form{
+                display: flex;
+                justify-content: center; 
+                align-items: center;
+
+                select{
+                    appearance: none;
+                    outline: none;
+                    border: none;
+                    color: var(--black-color);
+                    // width: 10rem;
+                    cursor: pointer;
+                    padding: 0.6rem;
+                }
+                
+                .select{
+                    margin: 0.5rem;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after{
+                        content: "\25BC";
+                        position: absolute;
+                        background-color: var(--white-color);          
+                        top: 0;
+                        right: 0;
+                        padding: 0.5rem;
+                        pointer-events: none; 
+                        transition: 0.5s;
+                    }
+
+                    &:hover::after{
+                        background-color: var(--blue-color);
+                        color: var(--white-color);}
+
+                }
+                
+            }
+            form input,
+            form button{
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+            form input{
+                margin-left: 0.5rem;
+            }
+            form button{
+                transition: all 0.3s ease;
+            }
+            form button:hover{
+                color: var(--white-color);
+                background-color: var(--blue-color);
+            }
+            .todo-container{
+                background-color: #fff;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+
+                ul.todo-list{
+                    width: 100%;
+                }
+
+                .todo{
+                    display: flex;
+                    align-items: center;
+                    transition: 0.5s;
+
+                    &.completed{
+                        text-decoration: line-through;
+                        opacity: 0.5;
+                    }
+
+                    &.fall{
+                        transform: translateY(4rem) rotateZ(20deg);
+                        opacity: 0;
+                    }
+
+                    li{
+                        flex: 1;
+                        text-align: left;
+
+                        &.todo-item{
+                            padding: 0 0.5rem;
+                        }
+                    }
+
+                    .checkedBtn:hover{
+                        background-color: seagreen;
+                    }
+                    .deletedBtn:hover{
+                        background-color: tomato;
+                    }
+
+                    .fa-trash,
+                    .fa-check{
+                        pointer-events: none;
+                    }
+
+                    
+                   
+                } 
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+
+    .bodyWrap{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        #header{
+            height: auto;
+            width: 100%;
+            position: static;
+        }
+    }
+    
+}
+
+
+
+
+

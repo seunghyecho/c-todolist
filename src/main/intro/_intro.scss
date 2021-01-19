@@ -1,0 +1,201 @@
+#intro {
+    width:800px; float: right; padding:0; box-sizing:border-box;
+    h1{
+        display: none;
+    }
+
+    .inner {
+        width: 100%;
+
+        .slideBox{
+
+            ul.slide{
+                width: 800px;
+                 height: 400px;
+    
+                li{
+                    position: absolute;
+                    top: 0;
+                    width: 800px;
+                    height: 400px;
+                    line-height: 400px;
+                    text-align: center;
+                    font-size: var(--font-large);
+                    color: var(--white-color);
+                    opacity: 0;
+                    z-index: 0;
+                    transition: 0.5s;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+    
+                    &:nth-of-type(1){
+                        background-image: url(../img/HeroRegularStandard_bloom-ambrosia-02_001_Default.jpg);
+                        background-color: seagreen;
+                    }
+                    &:nth-of-type(2){
+                        background-image: url(../img/HeroRegularStandard_LuxuryCollection-2019_001_Default.jpg);
+                        background-color: darkorange;
+                    }
+                    &:nth-of-type(3){
+                        background-image: url(../img/HeroRegularStandard_S93-Memoire-02_001_Default.jpg);
+                        background-color: seagreen;
+                    }
+
+                    &.showing{
+                        z-index: 3;
+                        opacity: 1;
+                    }
+               
+                }
+            }
+        }
+
+        .tabBox{
+            ul{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+
+                li{
+                    padding: var(--padding) 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    color: var(--grey-dark-color);
+                    box-sizing: border-box;
+                    
+
+                    &.on{
+                        border-bottom: 2px solid var(--black-color);
+                        box-sizing: border-box;
+                        color: var(--black-color);
+
+                    }
+                    &:hover{
+                        color: var(--black-color);
+                    }
+
+                    i{
+                        padding: 6px 0;
+                    }
+                }
+            }
+          
+
+            .tab_content_item{
+                display: none;
+                visibility: hidden;
+
+                &.on{
+                    display: block;
+                    visibility: visible;
+                }
+
+                &:nth-of-type(1){
+                    
+                    .wrap{
+                        margin: 2rem 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+    
+                    >div{
+                        text-align: center;
+    
+                        .img{
+                            height: 189px;
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        .text-md{
+                            margin: 12px 0;
+                            color: var(--black-color);
+                            font-size: var(--font-normal);
+                            font-weight: var(--font-bold);
+                        }
+                        .text-bt{
+                            color: var(--grey-light-color);
+                            font-size: var(--font-small);
+                        }
+                    }
+                }
+
+                &:nth-of-type(2){
+
+                    table{
+                        width: 100%;
+                        margin: 2rem 0;
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        
+                        thead{
+
+                            tr th{
+                                padding: 6px;
+                            }
+                        }
+
+                        tbody{
+                            text-align: center;
+
+                            tr{
+
+                                &:nth-of-type(odd){
+                                    background-color: rgba(0,0,0,0.03);
+                                }
+
+                                td{
+                                    padding: 6px;
+
+                                    &:first-child{
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+
+       
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+
+    #intro{
+        width: 100%;
+
+        .inner{
+            width: 100%;
+
+            .slideBox{
+
+                ul.slide{
+                    width: 100%;
+
+                    li{
+                        width: 100%;
+                        top: auto;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

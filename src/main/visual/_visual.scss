@@ -1,0 +1,12 @@
+#visual {
+    width:100%; height:500px; background:aqua; position:relative; transition:0.5s;
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #visual { background:orange;}
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+    #visual { background:violet;}
+}
